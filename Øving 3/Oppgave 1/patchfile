@@ -1,0 +1,2 @@
+5a6
+>   std::cout << "Hello mars!" << std::endl;
