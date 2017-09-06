@@ -1,5 +1,5 @@
 # Sikkerhet i programvare og nettverk
-Øvinger fra TDAT3020 Sikkerhet i programvare og nettverk, høsten 207, 3. klasse dataingeniør på NTNU.
+Øvinger fra TDAT3020 Sikkerhet i programvare og nettverk, høsten 2017, 3. klasse dataingeniør på NTNU.
 
 ## Øvinger
 - [Øving 1: Installere linux, kompilator og pakkesniffer](Øving%201)
