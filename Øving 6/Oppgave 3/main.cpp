@@ -1,7 +1,5 @@
 #include "crypto.hpp"
 #include <iostream>
-#include <vector>
-#include <thread>
 
 using namespace std;
 
@@ -22,8 +20,6 @@ int main() {
   string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
   char password[3];
   
-  vector<thread> threads;
-  
   for (char c1 : alphabet) {
     password[0] = c1;
     
@@ -33,21 +29,15 @@ int main() {
       for (char c3 : alphabet) {
         password[2] = c3;
         string hash = Crypto::hex(Crypto::pbkdf2(password, salt, iterations, keyLength));
+        cout << hash << ": " << password << endl;
         
         if (hash == key) {
           cout << "Password found: " << password << endl;
           return 0;
         }
-        
-        cout << hash << ": " << password << endl;
       }
     }
-    
-    
   }
-  
-  cout << "zzz: " << Crypto::hex(Crypto::pbkdf2("zzz", salt, iterations, keyLength)) << endl;
-  //aada93121200ccb7435480c050748493d62c87f3
   
   /*146a0ad2711640cb8cb2e40b1c27435c2e8ba3c3: QwC
   975f6b1a139b3be77ca83be02ce2946beb877be4: QwD
