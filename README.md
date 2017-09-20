@@ -13,6 +13,9 @@
   - [Oppgave 2 og 3](Øving%204/Oppgave%202%20og%203)
 - [Øving 5: Shellscript](Øving%205)
 - [Øving 6: Hash funksjoner, OpenSSL, Docker, CI](Øving%206)
+  - [Oppgave 1](Øving%206/Oppgave%201)
+  - [Oppgave 2](Øving%206/Oppgave%202)
+  - [Oppgave 3](Øving%206/Oppgave%203)
 - [Øving 7: ]()
 - [Øving 8: POSIX, Buffer overflow, symmetrisk/asymmetrisk kryptering]()
 
