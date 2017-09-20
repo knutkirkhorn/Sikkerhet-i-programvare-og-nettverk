@@ -11,6 +11,8 @@
 - [Øving 4: Assembly, C og dynamiske bibliotek](Øving%204)
   - [Oppgave 1](Øving%204/Oppgave%201)
   - [Oppgave 2 og 3](Øving%204/Oppgave%202%20og%203)
+- [Øving 5](Øving%205)
+- [Øving 6](Øving%206)
 
 ## Se andre emner
 Se [liste-over-emener](https://github.com/Knutakir/liste-over-emner) for en liste over alle emner jeg har hatt på NTNU.
