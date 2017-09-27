@@ -2,7 +2,7 @@
 
 Følgende linjer legges inn i crontab filen:
 ```
-*/2 8-11,13-16  * * 1-6  root    killall quake
+*/2 8-11,13-15  * * 1-6  root    killall quake
 30-58/2 12  * * 1-6  root    killall quake
 ```
 
