@@ -1,5 +1,5 @@
 # Oppgave 2
-Bruker [Simple-Web-Server](https://github.com/eidheim/Simple-Web-Server).
+Bruker [Simple-Web-Server](https://github.com/eidheim/Simple-Web-Server) for å sette opp en https webserver.
 
 ## Kommandoer for å lage HTTPS server sertifikat
 
