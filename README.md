@@ -31,6 +31,10 @@
 - [Øving 10: Sikker kommunikasjon og autentisering](Øving%2010)
   - [Oppgave 1](Øving%2010/Oppgave%201)
   - [Oppgave 2](Øving%2010/Oppgave%202)
+- [Øving 11: Epost]()
+- [Øving 12: SSL/TLS, OAuth2 og to-faktor autentisering]()
+- [Øving 13: IDS/IPS]()
+- [Øving 14:]()
 
 ## Se andre emner
 Se [liste-over-emener](https://github.com/Knutakir/liste-over-emner) for en liste over alle emner jeg har hatt på NTNU.
