@@ -1,0 +1,30 @@
+{
+  "name": "oppgave-1",
+  "version": "1.0.0",
+  "description": "Assignment 10, exercise 10",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.15.5"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Knut Kirkhorn",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Knutakir/Sikkerhet-i-programvare-og-nettverk.git"
+  },
+  "keywords": [
+    "Assignment",
+    "10",
+    "exercise",
+    "1"
+  ],
+  "bugs": {
+    "url": "https://github.com/Knutakir/Sikkerhet-i-programvare-og-nettverk/issues"
+  },
+  "homepage": "https://github.com/Knutakir/Sikkerhet-i-programvare-og-nettverk#readme"
+}

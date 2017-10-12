@@ -1,0 +1,19 @@
+head, body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login-container {
+  margin-top: 15%;
+}
+
+#logged-in-user {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
