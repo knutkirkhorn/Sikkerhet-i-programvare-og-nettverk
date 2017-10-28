@@ -34,7 +34,7 @@
 - [Øving 11: Epost]()
 - [Øving 12: SSL/TLS, OAuth2 og to-faktor autentisering]()
 - [Øving 13: IDS/IPS]()
-- [Øving 14:]()
+- [Øving 14: Introduksjon til kryptografi](Øving%2014)
 
 ## Se andre emner
 Se [liste-over-emener](https://github.com/Knutakir/liste-over-emner) for en liste over alle emner jeg har hatt på NTNU.
