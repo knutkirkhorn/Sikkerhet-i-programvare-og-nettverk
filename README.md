@@ -35,12 +35,13 @@
 - [Øving 12: SSL/TLS, OAuth2 og to-faktor autentisering]()
 - [Øving 13: IDS/IPS]()
 - [Øving 14: Introduksjon til kryptografi](Øving%2014)
-- [Øving 15: ]()
-- [Øving 16: ]()
-- [Øving 17: ]()
+- [Øving 15: VPN]()
+- [Øving 16: Blokkchifre]()
+- [Øving 17: Trådløse nett]()
 - [Øving 18: ]()
-- [Øving 19: ]()
+- [Øving 19: Adm/snmp/radius]()
 - [Øving 20: ]()
+- [Øving 21: Rutere, nettbaserte angrep]()
 
 ## Se andre emner
 Se [liste-over-emener](https://github.com/Knutakir/liste-over-emner) for en liste over alle emner jeg har hatt på NTNU.
