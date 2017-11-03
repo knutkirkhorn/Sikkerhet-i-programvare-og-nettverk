@@ -38,10 +38,13 @@
 - [Øving 15: VPN]()
 - [Øving 16: Blokkchifre]()
 - [Øving 17: Trådløse nett]()
-- [Øving 18: ]()
+- [Øving 18: Strømmechifre, kryptografiske hashfunksjoner]()
 - [Øving 19: Adm/snmp/radius]()
-- [Øving 20: ]()
+- [Øving 20: RSA]()
 - [Øving 21: Rutere, nettbaserte angrep]()
+- [Øving 22: Mer om asymmetriske chifre]()
+- [Øving 23: Case]()
+- [Øving 24: Litt om passord, oppsummering]()
 
 ## Se andre emner
 Se [liste-over-emener](https://github.com/Knutakir/liste-over-emner) for en liste over alle emner jeg har hatt på NTNU.
