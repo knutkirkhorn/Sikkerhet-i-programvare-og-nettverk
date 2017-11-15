@@ -25,6 +25,7 @@ const digest = "sha512";
 const httpsServer = https.createServer(options, app);
 
 let users = [];
+let authTokens = [];
 
 function checkIfUserExists(username) {
   for (let i = 0; i < users.length; i++) {
@@ -46,22 +47,54 @@ function checkCredentials(username, hash) {
   return false;
 }
 
-app.get('/auth', (request, response) => {
-  console.log(request.headers);
-  response.set("Authorization", "Bearer asdasd");
-  response.send("yoyo");
+function checkToken(checkToken) {
+  for (let i = 0; i < authTokens.length; i++) {
+    if (authTokens[i].token === checkToken) {
+      return true;
+    }
+  }
+  return false;
+}
+
+app.post('/auth', (request, response) => {
+  console.log("Client trying to authenticate");
+  if (checkToken(request.body.token)) {
+    response.send("Authenticated");
+  }
+  console.log("Not authenticated");
+  response.sendStatus(404);
 });
 
-app.get("/users", (request, response) => {
-  response.send(users);
+app.post('/sign-out', (request, response) => {
+  console.log("Client signing out");
+  //remove token
+  authTokens.splice(authTokens.indexOf(request.body.token));
+  console.log("Removed token");
+  response.send("Successfully signed out");
+});
+
+app.post("/get-users", (request, response) => {
+  console.log("Client trying to view all users");
+  if (checkToken(request.body.token)) {
+    response.send(users);
+  } else {
+    console.log("Not authenticated");
+    response.sendStatus(404);
+  }
 });
 
 app.post("/login", (request, response) => {
-  console.log("Login request");
-  console.log(request.headers);
+  console.log("Login request...");
   if (request.body.username && request.body.hash) {
     if (checkCredentials(request.body.username, request.body.hash)) {
       console.log("User: " + request.body.username + " signed in");
+
+      const randomToken = crypto.randomBytes(10).toString('hex');
+      const newToken = {
+        token: randomToken
+      };
+      authTokens.push(newToken);
+      response.set("Authorization", "Bearer " + randomToken);
       response.send("You are logged in");
     } else {
       console.log("Not authenticated");
@@ -90,7 +123,6 @@ app.post('/register', (request, response) => {
       users.push(newUser);
 
       console.log("New user registered: " + request.body.username);
-      response.set("Authorization", "Bearer yeaman");
       response.send("You are now registered! :)");
     } else {
       console.log("Username already exists");
@@ -101,21 +133,8 @@ app.post('/register', (request, response) => {
   }
 });
 
-app.get('/auths', (request, response) => {
-  if (request.body.username && request.body.hash) {
-
-  }
-
-  //TODO: use more iterations?
-  /*const options = {keySize: 512/32, iterations: 1024};
-  if (user.hash === CryptoJS.PBKDF2(hash, user.salt, options)) {
-    console.log("hei dette gikk bra");
-  }*/
-  //const user = users[request.body.username];
-  //console.log(CryptoJS.PBKDF2(hash, user.salt, options));
-});
-
-//8080 for testing
+//Start server on port 8080
 httpsServer.listen(8080, () => {
-  console.log("Started server");
+  console.log("Started server on port 8080");
+  console.log("Visit https://localhost:8080 to view the site");
 });

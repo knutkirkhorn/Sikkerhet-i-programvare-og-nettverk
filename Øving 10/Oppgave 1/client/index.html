@@ -10,7 +10,6 @@
   </head>
   <body>
     <div class="container">
-
       <div class="register-container">
         <p>Register new user</p>
         <input id="username-register-input" type="text" placeholder="Username">
@@ -25,10 +24,16 @@
         <button id="login-button" type="button" name="button">Login user</button>
       </div>
 
-      <p id="logged-in-user">LOGGED_IN_USER</p>
+      <div id="top-right-container" style="visibility: hidden;">
+        <p id="logged-in-user">LOGGED_IN_USER</p>
+        <button id="sign-out-button" type="button" name="button">Sign out</button>
+      </div>
 
-      <div class="all-users">
+      <div id="authenticated-container" style="visibility:hidden;">
+        <button id="check-if-authenticated" type="button">Check if user is authenticated</button>
+        <div class="all-users">
 
+        </div>
       </div>
     </div>
   </body>
