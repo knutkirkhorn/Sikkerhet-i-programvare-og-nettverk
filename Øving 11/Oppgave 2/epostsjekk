@@ -1,0 +1,56 @@
+#!/bin/bash
+
+print_addresses () {
+  for address in $1;
+  do
+    if [[ $address == "ip4:"* ]]; then
+      printf "   * IPv4-adresse: "
+      printf $address | cut -d ':' -f 2
+    elif [[ $address == "ip6:"* ]]; then
+      printf "   * IPv6-adresse: "
+      printf $address | cut -c 5-
+    elif [[ $address == "include:"* ]]; then
+      newAddress=`echo $address | cut -d ':' -f 2`
+      echo "   * Domene: $newAddress"
+
+      newSpfINCLUDE=`nslookup -type=txt $newAddress | grep -o -P "(?<=v=spf1).*(?=(\~all|\-all|\?all))"`
+      for word in $newSpfINCLUDE;
+      do
+        print_addresses $word
+      done
+    fi
+  done
+}
+
+# For å stoppe å fargelegge terminalen
+ENDC="\033[0m"
+
+# MX informasjon:
+echo ""
+echo "Mail eXchanger informasjon for: $1"
+dig=`dig mx $1 +short | cut -c 3-`
+echo " - Maskiner som har lov til å sende mail ut fra $1:"
+for address in $dig;
+do
+  addressIP=`nslookup $address | grep 'Address:' | tail -n 1 | cut -d ' ' -f 2`
+  echo "   * Domene: ${address%?}, Adresse: $addressIP"
+done
+echo ""
+
+# Sjekk om domenet bruker SPF
+SPF=`nslookup -type=txt "$1"`
+if [[ $SPF == *"v=spf1"* ]]; then
+  GREEN="\033[1;32m"
+  printf " - ${GREEN}✓ Dette domenet bruker SPF${ENDC}\n"
+  echo " - Andre maskiner som har lov til å sende mail ut fra $1 (SPF include):"
+  spfINCLUDE=`nslookup -type=txt $1 | grep -o -P "(?<=v=spf1).*(?=(\~all|\-all|\?all))"`
+
+  for word in $spfINCLUDE;
+  do
+    print_addresses $word
+  done
+  #print_addresses $spfINCLUDE
+else
+  RED="\033[1;31m"
+  printf " - ${RED}✓ Dette domenet bruker ikke SPF${ENDC}\n"
+fi
