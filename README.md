@@ -32,6 +32,8 @@
   - [Oppgave 1](Øving%2010/Oppgave%201)
   - [Oppgave 2](Øving%2010/Oppgave%202)
 - [Øving 11: Epost](Øving%2011)
+  - [Oppgave 1](Øving%2011/Oppgave%201)
+  - [Oppgave 2](Øving%2011/Oppgave%202)
 - [Øving 12: SSL/TLS, OAuth2 og to-faktor autentisering](Øving%2012)
 - [Øving 13: IDS/IPS]()
 - [Øving 14: Introduksjon til kryptografi](Øving%2014)
