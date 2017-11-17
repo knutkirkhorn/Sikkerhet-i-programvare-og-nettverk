@@ -59,10 +59,12 @@ function checkToken(checkToken) {
 app.post('/auth', (request, response) => {
   console.log('Client trying to authenticate');
   if (checkToken(request.body.token)) {
+    console.log('Authenticated');
     response.send('Authenticated');
+  } else {
+    console.log('Not authenticated');
+    response.sendStatus(404);
   }
-  console.log('Not authenticated');
-  response.sendStatus(404);
 });
 
 app.post('/sign-out', (request, response) => {
