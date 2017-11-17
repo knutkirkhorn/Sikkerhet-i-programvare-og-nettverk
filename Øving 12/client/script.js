@@ -28,12 +28,11 @@ $(document).ready(function() {
       $("#oauth-connect-button").click(function() {
         handleClientLoad();
         handleAuthActions();
-        alert("test");
       });
 
-      // $("#revoke-button").click(function() {
-      //
-      // });
+      $("#revoke-button").click(function() {
+        revokeAccess();
+      });
     });
   }
 
@@ -51,7 +50,6 @@ $(document).ready(function() {
 
   function setSigninStatus() {
     const user = GoogleAuth.currentUser.get();
-    console.log(user);
     const isAuthorized = user.hasGrantedScopes(SCOPE);
     if (isAuthorized) {
       const name = user.w3.ig;

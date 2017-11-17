@@ -8,3 +8,7 @@ head, body {
   text-align: center;
   width: 55%;
 }
+
+#revoke-button {
+  margin-top: 15%;
+}
