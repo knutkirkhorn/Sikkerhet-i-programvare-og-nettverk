@@ -15,7 +15,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Knutakir/Sikkerhet-i-programvare-og-nettverk.git"
+    "url": "git+https://github.com/knutkirkhorn/Sikkerhet-i-programvare-og-nettverk.git"
   },
   "keywords": [
     "Assignment",
@@ -24,7 +24,7 @@
     "1"
   ],
   "bugs": {
-    "url": "https://github.com/Knutakir/Sikkerhet-i-programvare-og-nettverk/issues"
+    "url": "https://github.com/knutkirkhorn/Sikkerhet-i-programvare-og-nettverk/issues"
   },
-  "homepage": "https://github.com/Knutakir/Sikkerhet-i-programvare-og-nettverk#readme"
+  "homepage": "https://github.com/knutkirkhorn/Sikkerhet-i-programvare-og-nettverk#readme"
 }

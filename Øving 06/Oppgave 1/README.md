@@ -11,7 +11,7 @@ apt-get install --yes cmake
 
 apt-get install --yes git
 
-git clone https://github.com/Knutakir/openssl-example
+git clone https://github.com/knutkirkhorn/openssl-example
 
 cd openssl-example
 
